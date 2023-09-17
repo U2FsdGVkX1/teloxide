@@ -80,7 +80,7 @@ pub fn default_reqwest_settings() -> reqwest::ClientBuilder {
 ///
 /// [Telegram documentation]: https://core.telegram.org/bots/api#making-requests
 fn method_url(base: reqwest::Url, token: &str, method_name: &str) -> reqwest::Url {
-    base.join(&format!("/bot{token}/{method_name}")).expect("failed to format url")
+    base.join(&format!("bot{token}/{method_name}")).expect("failed to format url")
 }
 
 /// Creates URL for downloading a file. See the [Telegram documentation].
